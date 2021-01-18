@@ -1,0 +1,117 @@
+:root {
+	--main-radius: 5px;
+	--main-padding: 5px;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	grid-template-areas:
+		"head head head head"
+		"main main main main"
+		"noteBooks noteBooks writeNotesHere writeNotesHere"
+		"noteBooks noteBooks writeNotesHere writeNotesHere";
+	grid-gap: 0.2rem;
+	text-align: center;
+	background-image: url("/Images/photo-1607088829306-76f3779160f6.jpg");
+}
+
+#head {
+	grid-area: head;
+	margin: 0;
+}
+
+main {
+	grid-area: main;
+	border-radius: var(--main-radius);
+	margin-bottom: 0;
+}
+
+#noteBooks {
+	background: #dcdcdc;
+	grid-area: noteBooks;
+	border-radius: var(--main-radius);
+	overflow-y: auto;
+	height: 70vh;
+	text-align: left;
+	margin-top: 0%;
+	padding-left: 10px;
+	white-space: pre-line;
+}
+
+#writeNotesHere {
+	background-color: floralwhite;
+	grid-area: writeNotesHere;
+	border-radius: var(--main-radius);
+	height: 70vh;
+	text-align: left;
+	padding-left: 10px;
+	overflow-y: auto;
+	margin-top: 0%;
+	white-space: pre-line;
+}
+
+#inputArea {
+	resize: none;
+	width: 80%;
+}
+#eraseNotesInMain {
+	position: absolute;
+	right: 0%;
+	margin-top: 55px;
+	font-style: italic;
+}
+#eraseListInMain {
+	position: absolute;
+	right: 10%;
+	margin-top: 55px;
+}
+button {
+	margin: 5px;
+	border: 0px;
+	background: none;
+	text-shadow: -1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000;
+	-webkit-text-stroke: 1px #000;
+	font-size: 18px;
+	font-style: italic;
+	font-weight: bold;
+	color: #fff;
+}
+#review {
+	position: absolute;
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	right: 25%;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000;
+	-webkit-text-stroke: 1px #000;
+	font-size: 40px;
+}
+#saveInputs {
+	position: absolute;
+	left: 25%;
+	padding: 0px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	color: #fff;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000;
+	-webkit-text-stroke: 1px #000;
+	font-size: 40px;
+}
+#editLists {
+	position: absolute;
+	left: 0%;
+	margin-top: 50px;
+}
+#clearAll {
+	position: absolute;
+	left: 16%;
+	margin-top: 50px;
+}
+#editNotes {
+	position: absolute;
+	left: 8%;
+	margin-top: 50px;
+}
